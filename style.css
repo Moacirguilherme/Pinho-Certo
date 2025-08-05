@@ -168,7 +168,7 @@ img {
     z-index: 1000;
     padding: 20px 0;
     transition: var(--transition);
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: transparent;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -179,8 +179,10 @@ img {
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
+    margin-left: 100px;
     transition: var(--transition);
+    border-radius: 50%;
 }
 
 .navbar ul {
@@ -245,10 +247,7 @@ img {
     transform: translateY(-3px);
 }
 
-.whatsapp-icon {
-    background: #25D366 !important;
-    color: var(--white) !important;
-}
+
 
 .menu-toggle {
     font-size: 24px;
@@ -257,7 +256,12 @@ img {
 }
 
 /* Hero Section */
+
 .hero {
+    background-image: url('assets/galeria7.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     height: 100vh;
     min-height: 700px;
     position: relative;
@@ -266,7 +270,7 @@ img {
 
 .hero-slider {
     width: 100%;
-    height: 100%;
+    height: 900px;
     position: relative;
     overflow: hidden;
 }
@@ -277,8 +281,9 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 1s ease;
 }
@@ -852,16 +857,6 @@ img {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* Galeria */
 .galeria-grid {
     display: grid;
@@ -1101,6 +1096,149 @@ img {
     font-size: 14px;
 }
 
+/* ====== FOOTER ====== segunda oopcao */ 
+
+footer {
+    background: #0a0a0a;
+    color: #f5f5f5;
+    padding: 50px 20px 30px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Logo */
+  
+  .logo-container {
+    margin-bottom: 25px;
+  }
+  
+  .logo-container img {
+    max-width: 150px;
+    height: auto;
+    width: 150px;   /* largura fixa */
+    height: 150px;  /* altura fixa igual à largura */
+    border-radius: 50%;
+    object-fit: cover; /* garante que a imagem preencha o círculo sem distorcer */
+    display: block;    /* remove espaçamento em linha */
+    margin: 0 auto;    /* opcional, centralizar */
+  }
+  
+  
+  /* Contato */
+  
+  .contact-info {
+    margin-bottom: 20px;
+  }
+  
+  .address a {
+    color: #ccc;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .address a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* Redes sociais */
+  .social-media {
+    margin: 30px 0;
+  }
+  
+  .social-media h2 {
+    font-size: 16px;
+    color: #d4af37;
+    margin-bottom: 15px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .social-icons a {
+    color: #ccc;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #d4af37;
+    transform: translateY(-3px);
+  }
+  
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #555, transparent);
+    margin: 30px auto;
+    width: 80%;
+    border: none;
+  }
+  
+  /* Textos */
+  .copyright {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  
+  .developer {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .developer a {
+    color: #d4af37;
+    text-decoration: none;
+  }
+  
+  .developer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ====== RESPONSIVO ====== */
+  @media (max-width: 600px) {
+    .social-icons {
+      gap: 15px;
+    }
+  
+    .address a {
+      font-size: 13px;
+    }
+  
+    .social-icons a {
+      font-size: 20px;
+    }
+  }
+/* ====== FOOTER ====== segunda oopcao */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Animações */
 .animate-left {
     opacity: 0;
@@ -1179,11 +1317,11 @@ img {
     .sobre-content {
         flex-direction: column;
     }
-    
+
     .sobre-img {
         margin-top: 30px;
     }
-    
+
     .hero-title {
         font-size: 48px;
     }
@@ -1193,7 +1331,7 @@ img {
     .menu-toggle {
         display: block;
     }
-    
+
     .navbar {
         position: fixed;
         top: 90px;
@@ -1206,39 +1344,39 @@ img {
         padding: 40px 20px;
         overflow-y: auto;
     }
-    
+
     .navbar.active {
         left: 0;
     }
-    
+
     .navbar ul {
         flex-direction: column;
     }
-    
+
     .navbar ul li {
         margin: 15px 0;
     }
-    
+
     .social-header {
         display: none;
     }
-    
+
     .hero-title {
         font-size: 36px;
     }
-    
+
     .hero-subtitle {
         font-size: 18px;
     }
-    
+
     .section {
         padding: 80px 0;
     }
-    
+
     .section-title {
         font-size: 30px;
     }
-    
+
     .whatsapp-float {
         width: 50px;
         height: 50px;
@@ -1252,20 +1390,20 @@ img {
     .hero-title {
         font-size: 32px;
     }
-    
+
     .sobre-stats {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .campeonatos-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .contato-content {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
